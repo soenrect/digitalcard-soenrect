@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
+          base: process.env.VITE_BASE_PATH || "/digitalcard-soenrect",
         }
       }
     };
