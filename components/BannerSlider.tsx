@@ -7,7 +7,8 @@ import { CarouselMediaItem } from '../types'; // Updated import
 // 2. Update this 'bannerMediaData' array with your actual file names and types.
 const bannerMediaData: CarouselMediaItem[] = [ // Updated type
   // { id: 'banner1', type: 'image', src: 'https://picsum.photos/seed/agencyBanner1/1600/900', alt: 'Showcase of Stunning Web Designs' },
-  { id: 'banner1', type: 'video', src: './assets/video/backgroundvid.mp4', poster: '/', alt: 'Dynamic Digital Marketing Animation' },
+  { id: 'banner1', type: 'video', src: './assets/video/backgroundvid.mp4', poster: '/', alt: 'Mapping Projetion' },
+  { id: 'banner1', type: 'video', src: './assets/video/showvid3.mp4', poster: '/', alt: 'Mapping Projetion' },
   // { id: 'banner3', type: 'image', src: 'https://picsum.photos/seed/agencyBanner2/1600/900', alt: 'Creative Branding Concepts Collage' },
   // { id: 'banner4', type: 'video', src: '/banner-media/video2.mp4', poster: 'https://picsum.photos/seed/agencyVideoPoster2/1600/900', alt: 'Client Success Story Montage' },
   // { id: 'banner5', type: 'image', src: 'https://picsum.photos/seed/agencyBanner3/1600/900', alt: 'Our Team Crafting Digital Solutions' },
@@ -15,7 +16,7 @@ const bannerMediaData: CarouselMediaItem[] = [ // Updated type
 ];
 
 const FADE_TRANSITION_DURATION_MS = 500; // Duration of the fade effect (e.g., 0.5 seconds)
-const SLIDE_INTERVAL_MS = 5000;         // How long each slide stays visible (5 seconds)
+const SLIDE_INTERVAL_MS = 10000;         // How long each slide stays visible (5 seconds)
 
 const BannerSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
