@@ -180,13 +180,13 @@ const HeroSection: React.FC = () => {
                     mediaItems={scroller1MediaData}
                     itemHeightClassName="h-36 sm:h-40 md:h-44"
                     itemAspectRatioClassName="aspect-video"
-                    slideDuration="10s" 
+                    slideDuration="25s" 
                   />
                   <HorizontalMediaScroller
                     mediaItems={scroller2MediaData}
                     itemHeightClassName="h-36 sm:h-40 md:h-44"
                     itemAspectRatioClassName="aspect-video"
-                    slideDuration="15s" 
+                    slideDuration="40s" 
                   />
                 </div>
               </div>

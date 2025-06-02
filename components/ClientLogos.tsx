@@ -35,8 +35,9 @@ const ClientLogos: React.FC = () => {
       <h3 className="text-xl sm:text-2xl font-semibold text-center text-white mb-6 sm:mb-8"> {/* Adjusted margin */}
         Trusted by Industry Leaders
       </h3>
-      <div className="relative w-full overflow-hidden group group-hover:pause-animation">
-        <div className="flex animate-marquee whitespace-nowrap">
+      {/* The 'group' class enables pause on hover via CSS if .animate-marquee-css is styled with group-hover:animation-play-state:paused */}
+      <div className="relative w-full overflow-hidden group">
+        <div className="flex animate-marquee-css whitespace-nowrap"> {/* Use animate-marquee-css for CSS animation */}
           {duplicatedLogos.map((logo, index) => (
             <div key={`${logo.id}-${index}`} className="flex-shrink-0 mx-2 sm:mx-8 md:mx-10 py-2">
               <img

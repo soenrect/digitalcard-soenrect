@@ -65,17 +65,19 @@
       background: #3b82f6; /* blue-500 (primary-light) */
     }
 
-    /* Marquee Animation for ClientLogos */
+    /* Marquee Animation - Still available for other components like ClientLogos */
     @keyframes marquee {
       0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
+      100% { transform: translateX(-50%); } /* Corrected for seamless loop with duplicated items */
     }
-    .animate-marquee {
-      animation: marquee 40s linear infinite; /* Adjust duration as needed */
+    .animate-marquee-css { /* Renamed to avoid conflict if HorizontalMediaScroller reuses 'animate-marquee' for non-animation styles */
+      animation: marquee 40s linear infinite; /* Default duration, can be overridden inline */
       will-change: transform; /* Optimize animation */
+      backface-visibility: hidden; /* Helps prevent rendering glitches during transform */
     }
-    .group-hover\:pause-animation:hover .animate-marquee,
-    .group:hover .animate-marquee { /* Ensure it pauses when group is hovered */
+    /* Pause animation on hover for CSS-driven marquees */
+    .group-hover\:pause-animation:hover .animate-marquee-css,
+    .group:hover .animate-marquee-css {
         animation-play-state: paused;
     }
 
