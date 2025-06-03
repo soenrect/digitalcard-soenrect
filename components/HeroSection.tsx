@@ -155,15 +155,16 @@ const HeroSection: React.FC = () => {
                   Portfolio Bussiness Development
                 </a>
               </div>
-              <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-4 sm:pt-6">
-                {mainStats.map((stat) => (
-                  <StatDisplay key={stat.label} stat={stat} valueClassName="text-xl sm:text-2xl text-white" labelClassName="text-xs text-gray-400"/>
-                ))}
-              </div>
+              
             </div>
 
             {/* Right Column */}
             <div className="space-y-6 md:space-y-8">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2 sm:pt-6 pb-4">
+                {mainStats.map((stat) => (
+                  <StatDisplay key={stat.label} stat={stat} valueClassName="text-xl sm:text-2xl text-white" labelClassName="text-xs text-gray-400"/>
+                ))}
+              </div>
               <div>
                 <h3 className="text-lg sm:text-xl font-semibold mb-4 text-white">Our Core Services</h3>
                 <div className="space-y-4 sm:space-y-5">
