@@ -83,6 +83,7 @@ const VideoSlider: React.FC = () => {
             poster={currentVideo.poster}
             controls
             autoPlay
+            muted 
             playsInline 
             onEnded={handleVideoEnded}
             aria-label={currentVideo.title}
